@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  /** Primarys **/
+  --nutmeg: hsl(14, 45%, 36%);
+  --dark-raspberry: hsl(332, 51%, 32%);
+
+  /** neutrals **/
+  --white: hsl(0, 0%, 100%);
+  --rose--white: hsl(330, 100%, 98%);
+  --eggshell: hsl(30, 54%, 90%);
+  --light-grey: hsl(30, 18%, 87%);
+  --Wenge-brown: hsl(30, 10%, 34%);
+  --dark-charcoal: hsl(24, 5%, 18%);
+}
+
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 1rem 0;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.6rem;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--eggshell);
+  color: var(--Wenge-brown);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3.6rem;
+  color: var(--dark-charcoal);
+}
+
+h2 {
+  font-size: 3rem;
+  color: var(--nutmeg);
+}
+
+/** Basic CSS **/
+
+.container {
+  width: 50%;
+  margin: 5rem auto;
+  padding: 4rem 3rem;
+  border-radius: 1.2rem;
+  background-color: var(--white);
+}
+
+@media (width <= 768px) {
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.container .omelette {
+  width: 100%;
+  height: auto;
+  border-radius: 1.2rem;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.preparation-time {
+  background-color: var(--rose--white);
+  border-radius: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.preparation-time p {
+  font-size: 2.4rem;
+  color: var(--dark-raspberry);
+  padding: 1rem;
+}
+
+.preparation-time ul li {
+  color: var(--Wenge-brown);
+}
+
+.boxes {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+@media (width <= 768px) {
+  .boxes {
+    padding: 0 2.5rem;
+  }
+}
+
+.boxes:first-of-type {
+  border-bottom: none;
+}
+
+.boxes:last-child {
+  border-bottom: none;
+}
+
+.nutritional-info {
+  padding: 1rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-bottom: 1px solid var(--light-grey);
+}
+
+.nutritional-info:last-child {
+  border-bottom: none;
+}
+
+.nutritional-info .value {
+  font-weight: 600;
+  color: var(--nutmeg);
+  justify-content: flex-start;
+}
